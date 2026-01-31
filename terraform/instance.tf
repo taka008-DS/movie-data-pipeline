@@ -1,6 +1,7 @@
 resource "aws_instance" "web" {
   ami                         = data.aws_ami.amazon_linux.id
   instance_type               = "t2.micro"
+  iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
   subnet_id                   = aws_subnet.public_subnet_1.id
   associate_public_ip_address = true
   security_groups             = [aws_security_group.ec2_sg.id]
