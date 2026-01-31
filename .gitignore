@@ -1,0 +1,9 @@
+# SSH鍵を無視
+id_rsa
+id_rsa.pub
+
+# Terraformの管理ファイルを無視
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
