@@ -99,7 +99,7 @@ def normalize_movie(item: dict) -> dict:
 
 def main():
     # 1) DynamoDBからmovies取得
-    session = boto3.Session(profile_name="default", region_name=REGION)
+    session = boto3.Session(region_name=REGION)
     ddb = session.resource("dynamodb")
     table = ddb.Table(DDB_TABLE)
 
